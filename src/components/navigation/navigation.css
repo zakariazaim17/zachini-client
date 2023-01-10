@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+.upperHeader {
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: auto;
+  background: black;
+
+  border-bottom: groove;
+}
+
+.main-navigation_logo {
+}
+
+.main-navigation_item {
+  background-color: antiquewhite;
+
+  font-size: 1.3rem;
+}
+
+.main-navigation_item1 ul {
+  background-color: aqua;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 50%;
+  float: right;
+  font-size: 1.3rem;
+}
+
+.main-navigation_item1 a,
+.main-navigation_item1 button {
+  text-decoration: none;
+  color: rgb(15, 15, 14);
+}
+
+.main-navigation_item1 li {
+  margin: 0 1rem;
+}
+
+.main-navigation_item ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.main-navigation_item li {
+  margin: 0 1rem;
+}
+.main-navigation_item a,
+.main-navigation_item button {
+  text-decoration: none;
+  color: rgb(15, 15, 14);
+}
+
+.main-navigation_item a:hover,
+.main-navigation_item a:active,
+.main-navigation_item a.active,
+.main-navigation_item button:hover {
+  color: orange;
+}
+
+h1 {
+  font-family: "ZenDots";
+}
+
+img {
+  width: 145px;
+  height: 60px;
+}
+
+.uio {
+  margin-top: 2px;
+}
