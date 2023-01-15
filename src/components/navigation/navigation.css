@@ -1,21 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
-.upperHeader {
+.median_header {
   text-align: center;
   justify-content: center;
   width: 100%;
+  font-size: large;
+}
+
+.median_header_logo {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: cursive;
 }
 .main-navigation {
   display: flex;
   flex-direction: column;
-
+  background-color: black;
   width: 100%;
   height: auto;
-  background: black;
 
   border-bottom: groove;
-}
-
-.main-navigation_logo {
 }
 
 .main-navigation_item {
@@ -25,24 +30,22 @@
 }
 
 .main-navigation_item1 ul {
-  background-color: aqua;
   list-style: none;
   display: flex;
+
   flex-direction: row;
   justify-content: flex-end;
   width: 50%;
   float: right;
-  font-size: 1.3rem;
 }
 
 .main-navigation_item1 a,
 .main-navigation_item1 button {
   text-decoration: none;
-  color: rgb(15, 15, 14);
 }
 
 .main-navigation_item1 li {
-  margin: 0 1rem;
+  margin: 0 10px;
 }
 
 .main-navigation_item ul {
@@ -73,11 +76,17 @@ h1 {
   font-family: "ZenDots";
 }
 
-img {
-  width: 145px;
-  height: 60px;
-}
-
 .uio {
-  margin-top: 2px;
+  padding-top: 2px;
+  margin-left: 6px;
+  color: rgb(252, 251, 251);
+}
+.kk {
+  color: rgb(255, 255, 255);
+  font-size: medium;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
 }

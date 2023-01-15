@@ -9,6 +9,9 @@ import {
   FcRating,
 } from "react-icons/fc";
 
+import { HiOutlineLogout } from "react-icons/hi";
+import { VscAccount } from "react-icons/vsc";
+
 const MainNavigation = (props) => {
   const logout = async () => {
     try {
@@ -26,21 +29,20 @@ const MainNavigation = (props) => {
       <nav className="main-navigation_item1">
         <ul>
           <li>
-            <NavLink to="/profile">Account</NavLink>
+            <NavLink to="/profile" className="kk">
+              Profile <VscAccount className="uio" />
+            </NavLink>
           </li>
+
           <li>
-            <NavLink to="/favourites">whishList</NavLink>
-          </li>
-          <li>
-            <NavLink onClick={logout} to="/welcome">
-              Logout
-              <FcRight className="uio" />
+            <NavLink onClick={logout} to="/welcome" className="kk">
+              Signout <HiOutlineLogout className="uio" />
             </NavLink>
           </li>
         </ul>
       </nav>
-      <nav className="upperHeader">
-        <NavLink className="main-navigation_logo" to="/shop">
+      <nav className="median_header">
+        <NavLink className="median_header_logo" to="/shop">
           ZACHINI
         </NavLink>
       </nav>

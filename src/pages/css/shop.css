@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+Pro&display=swap");
+
+.image_container {
+  width: 100%;
+  height: 520px;
+}
+
+.grid_container {
+  margin-top: 20px;
+}
+
+.median_block_image {
+  width: 100%;
+}
+.median_block_text {
+  text-align: center;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.median_sellers_text {
+  text-align: center;
+  text-decoration: none;
+  font-family: "DM Serif Display", serif;
+  font-size: 10px;
+}
+.median_text_icon {
+  margin-left: 1px;
+}
+
+.description_median_text {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.median_conatainer {
+  text-decoration: none;
+  text-align: center;
+}
+
+.lower_text {
+  margin-top: 100px;
+  font-weight: 700;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.lower_description {
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.top_sellers_container {
+  text-align: center;
+}
