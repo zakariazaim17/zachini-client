@@ -17,6 +17,7 @@ import Brand from "./pages/brand";
 import SubBrand from "./pages/subBrand";
 import Authcontext from "./components/context/context.js";
 import MainNavigation from "./components/navigation/navigation";
+import Sale from "./pages/sale";
 
 const App = () => {
   const ClientToken = localStorage.getItem("clientToken");
@@ -65,6 +66,10 @@ const App = () => {
                   component={Category}
                   exact
                 />
+              )}
+
+              {ClientToken && (
+                <Route path="/shop/sale" component={Sale} exact />
               )}
 
               {ClientToken && <Route path="/profile" component={Profile} />}

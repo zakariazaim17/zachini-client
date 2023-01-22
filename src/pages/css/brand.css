@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+Pro&display=swap");
+
+.brands_container {
+  display: flex;
+  flex-direction: row;
+}
+FormControlLabel {
+  font-size: 10px;
+}

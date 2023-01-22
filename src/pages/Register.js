@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import Authenticate from "../api/authentication";
-import store from "../redux/store";
 import Authcontext from "../components/context/context.js";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

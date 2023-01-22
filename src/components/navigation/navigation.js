@@ -15,9 +15,10 @@ import { VscAccount } from "react-icons/vsc";
 const MainNavigation = (props) => {
   const logout = async () => {
     try {
-      localStorage.removeItem("ClientToken");
-      localStorage.removeItem("CurentcliEnt");
-      localStorage.removeItem("cl");
+      localStorage.removeItem("clientToken");
+      localStorage.removeItem("clientName");
+      localStorage.removeItem("clientEmail");
+      localStorage.removeItem("clientId");
       window.location.reload();
     } catch (e) {
       console.log(e.message);
@@ -50,22 +51,22 @@ const MainNavigation = (props) => {
         {ClientToken && (
           <ul>
             <li>
-              <NavLink to="/favourites">Sale</NavLink>
+              <NavLink to="/shop/sale">Sale</NavLink>
             </li>
             <li>
-              <NavLink to="/favourites">Designers</NavLink>
+              <NavLink to="/shop/brand">Designers</NavLink>
             </li>
             <li>
-              <NavLink to="/favourites">Clothing</NavLink>
+              <NavLink to="/shop/category/clothing">Clothing</NavLink>
             </li>
             <li>
-              <NavLink to="/favourites">Bags</NavLink>
+              <NavLink to="/shop/category/bags">Bags</NavLink>
             </li>
             <li>
-              <NavLink to="/favourites">Shoes</NavLink>
+              <NavLink to="/shop/category/shoes">Shoes</NavLink>
             </li>
             <li>
-              <NavLink to="/favourites">Jwellery</NavLink>
+              <NavLink to="/shop/category/jwellery">Jwellery</NavLink>
             </li>
           </ul>
         )}
