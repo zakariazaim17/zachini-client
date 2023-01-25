@@ -1,0 +1,26 @@
+.parent_container {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.form_container {
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+}
+
+.input_container {
+}
+
+.grid_container {
+  margin-top: 40px;
+}

@@ -9,10 +9,10 @@ import { FcApproval } from "react-icons/fc";
 
 const Shop = () => {
   return (
-    <div className="parent_container">
+    <div>
       <div>
         <img
-          className="image_container"
+          className="image_container_shop"
           src="https://media.matchesfashion.com/apps/Content/Homepage/Promos/02995fd5-d3c5-4fed-830f-bfaa26eea115-0111-WW-HP-DESKTOP--promo-9-large.jpg"
         />
 
@@ -135,7 +135,6 @@ const Shop = () => {
             </Grid>
           </Grid>
         </div>
-
         <div className="lower_container">
           <Grid container spacing={2} className="grid_container">
             <Grid item xs={4}>

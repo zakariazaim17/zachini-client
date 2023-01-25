@@ -28,19 +28,21 @@ const MainNavigation = (props) => {
   return (
     <header className="main-navigation">
       <nav className="main-navigation_item1">
-        <ul>
-          <li>
-            <NavLink to="/profile" className="kk">
-              Profile <VscAccount className="uio" />
-            </NavLink>
-          </li>
+        {ClientToken && (
+          <ul>
+            <li>
+              <NavLink to="/profile" className="kk">
+                Profile <VscAccount className="uio" />
+              </NavLink>
+            </li>
 
-          <li>
-            <NavLink onClick={logout} to="/welcome" className="kk">
-              Signout <HiOutlineLogout className="uio" />
-            </NavLink>
-          </li>
-        </ul>
+            <li>
+              <NavLink onClick={logout} to="/welcome" className="kk">
+                Signout <HiOutlineLogout className="uio" />
+              </NavLink>
+            </li>
+          </ul>
+        )}
       </nav>
       <nav className="median_header">
         <NavLink className="median_header_logo" to="/shop">

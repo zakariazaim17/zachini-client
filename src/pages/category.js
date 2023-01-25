@@ -41,6 +41,7 @@ const Category = (props) => {
             return (
               <Grid item xs={4} key={product._id + product.title}>
                 <SingleProduct
+                  id={product._id}
                   key={product._id}
                   imageUrl={product.product_main_image}
                   title={product.title}
@@ -54,9 +55,7 @@ const Category = (props) => {
             );
           })
         ) : (
-          <Grid item xs={8}>
-            <p>here category</p>
-          </Grid>
+          <></>
         )}
       </Grid>
     </div>

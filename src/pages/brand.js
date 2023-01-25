@@ -104,9 +104,7 @@ const Brand = () => {
             );
           })
         ) : (
-          <Grid item xs={8}>
-            <p>here category</p>
-          </Grid>
+          <></>
         )}
       </Grid>
     </div>

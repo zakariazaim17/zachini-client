@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+Pro&display=swap");
 
-.product_container {
+.product_wrapper {
   display: flex;
   flex-direction: column;
-  background-color: antiquewhite;
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
+.single_product_image {
+  max-width: 400px;
   background-color: aqua;
   height: fit-content;
 }
@@ -31,7 +30,7 @@ img {
 .product_discount {
   color: rgb(212, 55, 55);
 }
-.product_title {
+.product_title_text {
   font-weight: 400;
   font-size: 14px;
 }
