@@ -40,3 +40,19 @@
   text-align: center;
   align-items: center;
 }
+
+.product_page_container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.tab_content {
+  margin-top: 25px;
+}
+.customized_grid {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

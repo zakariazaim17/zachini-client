@@ -18,25 +18,33 @@ const Category = (props) => {
   }, [categoryName]);
 
   const getCategoryProducts = async () => {
-    const fetchedProducts = await fetch(serverUrl, {
-      mode: "cors",
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("clientToken")}`,
-      },
-    });
+    try {
+      const fetchedProducts = await fetch(serverUrl, {
+        mode: "cors",
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("clientToken")}`,
+        },
+      });
 
-    const fetched = await fetchedProducts.json();
-    console.log("fetched products", fetched);
+      const fetched = await fetchedProducts.json();
+      if (typeof fetchedProducts === "string") {
+        return console.log("not array");
+      }
+      console.log("fetched products", fetched);
 
-    setProducts(fetched);
+      setProducts(fetched);
+    } catch (e) {
+      console.log("error happened", e);
+    }
 
     // console.log("fetched products", fetchedProducts);
   };
   return (
     <div>
       <Grid container spacing={2}>
-        {products.length > 0 ? (
+        {products.length > 0 && typeof products !== "string" ? (
+          (console.log("product", products),
           products.map((product) => {
             return (
               <Grid item xs={4} key={product._id + product.title}>
@@ -53,7 +61,7 @@ const Category = (props) => {
                 />
               </Grid>
             );
-          })
+          }))
         ) : (
           <></>
         )}

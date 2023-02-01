@@ -19,6 +19,7 @@ const MainNavigation = (props) => {
       localStorage.removeItem("clientName");
       localStorage.removeItem("clientEmail");
       localStorage.removeItem("clientId");
+      localStorage.removeItem("isClient");
       window.location.reload();
     } catch (e) {
       console.log(e.message);

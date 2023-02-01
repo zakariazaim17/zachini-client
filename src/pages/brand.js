@@ -87,12 +87,13 @@ const Brand = () => {
         <FormControlLabel value="PRADA" control={<Radio />} label="Prada" />
       </RadioGroup>
       <Grid container spacing={2}>
-        {products.length > 0 ? (
+        {products.length > 0 && typeof products !== "string" ? (
           products.map((product) => {
             return (
               <Grid item xs={4} key={product._id + product.title}>
                 <SingleProduct
                   key={product._id}
+                  id={product._id}
                   imageUrl={product.product_main_image}
                   title={product.title}
                   price={product.price}
