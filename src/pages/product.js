@@ -2,6 +2,10 @@ import { Chip, Grid, Tab, Tabs } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import SingleProduct from "../components/products/singleProduct/singleProduct";
 import "./css/product.css";
+import StripeCheckout from "react-stripe-checkout";
+import dotenv from "dotenv";
+dotenv.config();
+
 const Product = (props) => {
   const productID = props.match.params.id;
   console.log("passed", productID, localStorage.getItem("clientToken"));
@@ -20,8 +24,11 @@ const Product = (props) => {
 
   const SimilarProductUrl = `https://zachini.herokuapp.com/products/category`;
 
+  const oredrUrl = "https://zachini.herokuapp.com/order/create";
+
   useEffect(() => {
     getProduct();
+    console.log(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
   }, [productID]);
 
   useEffect(() => {
@@ -43,6 +50,34 @@ const Product = (props) => {
     setProduct(fetched[0]);
 
     // console.log("fetched products", fetchedProducts);
+  };
+
+  const handleOrder = async () => {
+    console.log("oredr payed");
+    try {
+      let formData = new FormData();
+
+      formData.append("buyer_id", localStorage.getItem("clientId"));
+      formData.append("product_id", productID);
+      formData.append("order_image", product.product_main_image);
+      formData.append("order_title", product.title);
+      formData.append("order_price", product.price);
+      formData.append("order_category", product.category);
+
+      const createdOrder = await fetch(oredrUrl, {
+        // mode: "cors",
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("clientToken")}`,
+        },
+        body: formData,
+      });
+
+      const order = await createdOrder.json();
+      console.log("order", order);
+    } catch (e) {
+      console.log("error occured", e);
+    }
   };
 
   const getCustomizedProducts = () => {
@@ -151,6 +186,15 @@ const Product = (props) => {
 
               <p>Description: </p>
               <p>{product.description}</p>
+
+              <StripeCheckout
+                stripeKey={process.env.REACT_APP_STRIPE_PUBLIC_KEY}
+                token={handleOrder}
+                name="Buy"
+                amount={props.price * 100}
+              >
+                <button className="Buy-btn">Purchase</button>
+              </StripeCheckout>
             </div>
           </div>
           <div className="product_page_container">

@@ -9,7 +9,7 @@ import Login from "./pages/Login";
 import Category from "./pages/category";
 import SubCategory from "./pages/subCategory";
 import Favourites from "./pages/favourite";
-import Profile from "./pages/profile";
+import Profile from "./pages/Profile/profile";
 import Register from "./pages/Register";
 import Product from "./pages/product";
 import Shop from "./pages/shop";
