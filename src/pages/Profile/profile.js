@@ -16,17 +16,6 @@ import { GrContact, GrUserAdmin } from "react-icons/gr";
 import SingleProduct from "../../components/products/singleProduct/singleProduct";
 
 const Profile = () => {
-  /* const userDetails = new Enum({
-    userName: String,
-    userEmail: String,
-    country: String,
-    date_of_birth: String,
-    phone: Number,
-    gender: String,
-    zip_code: Number,
-  });
-*/
-
   const [selectedTab, setSelectedTab] = useState("points");
   const [userType, setUserType] = useState("user");
   const [userOrders, setUserOrders] = useState([]);
@@ -36,7 +25,7 @@ const Profile = () => {
   );
   const userUrl = `https://zachini.herokuapp.com/${userType}/`;
   const orderUrl = `https://zachini.herokuapp.com/order/`;
-  //`https://zachini.herokuapp.com/${userType}/${userId}`;
+
   const [userDetlais, setUserDetails] = useState({
     name: "",
     email: "",
@@ -48,9 +37,6 @@ const Profile = () => {
   });
 
   useEffect(() => {
-    console.log("profile entered");
-    //setUserClient(localStorage.getItem("isClient"));
-    console.log("isClient", isUserClient === "true");
     setUserType(localStorage.getItem("isClient") ? "user" : "admin");
   }, []);
 
