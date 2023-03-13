@@ -7,10 +7,10 @@ const Sale = () => {
   const serverUrl = `https://zachini.herokuapp.com/products/sale`;
 
   useEffect(() => {
-    getCategoryProducts();
+    getSaleProducts();
   }, []);
 
-  const getCategoryProducts = async () => {
+  const getSaleProducts = async () => {
     const fetchedProducts = await fetch(serverUrl, {
       mode: "cors",
       method: "GET",
@@ -20,7 +20,6 @@ const Sale = () => {
     });
 
     const fetched = await fetchedProducts.json();
-    console.log("fetched products", fetched);
 
     setProducts(fetched);
   };

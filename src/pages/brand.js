@@ -1,10 +1,4 @@
-import {
-  FormControlLabel,
-  FormLabel,
-  Grid,
-  Radio,
-  RadioGroup,
-} from "@mui/material";
+import { FormControlLabel, Grid, Radio, RadioGroup } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import SingleProduct from "../components/products/singleProduct/singleProduct";
 import "./css/brand.css";
@@ -19,10 +13,10 @@ const Brand = () => {
   const serverUrl = `https://zachini.herokuapp.com/products/brand/${brandValue}`;
 
   useEffect(() => {
-    getCategoryProducts();
+    getDesignerProducts();
   }, [brandValue]);
 
-  const getCategoryProducts = async () => {
+  const getDesignerProducts = async () => {
     const fetchedProducts = await fetch(serverUrl, {
       mode: "cors",
       method: "GET",
@@ -32,7 +26,6 @@ const Brand = () => {
     });
 
     const fetched = await fetchedProducts.json();
-    console.log("fetched products", fetched);
 
     setProducts(fetched);
   };

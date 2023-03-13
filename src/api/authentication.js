@@ -25,7 +25,6 @@ const Authenticate = async (props) => {
     });
 
     const authResult = await userToAuthenticate.json();
-    console.log("user", authResult, "||||", userToAuthenticate);
 
     if (userToAuthenticate.status === 500) {
       return Promise.reject(authResult);
@@ -42,7 +41,7 @@ const Authenticate = async (props) => {
       });
     }
   } catch (e) {
-    console.log("errro", e);
+    console.log("error", e);
   }
 };
 

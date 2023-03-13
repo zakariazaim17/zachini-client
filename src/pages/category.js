@@ -4,11 +4,6 @@ import SingleProduct from "../components/products/singleProduct/singleProduct";
 
 const Category = (props) => {
   const categoryName = props.match.params.categoryName;
-  console.log(
-    "passed",
-    categoryName.categoryName,
-    localStorage.getItem("clientToken")
-  );
 
   const [products, setProducts] = useState([]);
 
@@ -29,16 +24,13 @@ const Category = (props) => {
 
       const fetched = await fetchedProducts.json();
       if (typeof fetchedProducts === "string") {
-        return console.log("not array");
+        return console.log("error formatting");
       }
-      console.log("fetched products", fetched);
 
       setProducts(fetched);
     } catch (e) {
-      console.log("error happened", e);
+      console.log("error", e);
     }
-
-    // console.log("fetched products", fetchedProducts);
   };
   return (
     <div>

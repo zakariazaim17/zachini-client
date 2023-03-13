@@ -7,14 +7,11 @@ import {
 } from "react-router-dom";
 import Login from "./pages/Login";
 import Category from "./pages/category";
-import SubCategory from "./pages/subCategory";
-import Favourites from "./pages/favourite";
 import Profile from "./pages/Profile/profile";
 import Register from "./pages/Register";
 import Product from "./pages/product";
 import Shop from "./pages/shop";
 import Brand from "./pages/brand";
-import SubBrand from "./pages/subBrand";
 import Authcontext from "./components/context/context.js";
 import MainNavigation from "./components/navigation/navigation";
 import Sale from "./pages/sale";
@@ -83,14 +80,6 @@ const App = () => {
               )}
 
               {ClientToken && (
-                <Route
-                  path="/shop/category/:categoryName/subCategory/:subCategoryName"
-                  component={SubCategory}
-                  exact
-                />
-              )}
-
-              {ClientToken && (
                 <Route path="/shop/products/:id" component={Product} exact />
               )}
 
@@ -100,22 +89,10 @@ const App = () => {
 
               {ClientToken && (
                 <Route
-                  path="/shop/brand/:brandName"
-                  component={SubBrand}
-                  exact
-                />
-              )}
-
-              {ClientToken && (
-                <Route
                   path="/shop/brand/:brandName/:productId"
                   component={Product}
                   exact
                 />
-              )}
-
-              {ClientToken && (
-                <Route path="/favourites" component={Favourites} exact />
               )}
               <Route path="/login" component={Login} />
               <Route path="/shop" component={Shop} />

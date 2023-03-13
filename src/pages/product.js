@@ -53,7 +53,6 @@ const Product = (props) => {
   };
 
   const handleOrder = async () => {
-    console.log("oredr payed");
     try {
       let formData = new FormData();
 
@@ -74,9 +73,8 @@ const Product = (props) => {
       });
 
       const order = await createdOrder.json();
-      console.log("order", order);
     } catch (e) {
-      console.log("error occured", e);
+      console.log("error", e);
     }
   };
 

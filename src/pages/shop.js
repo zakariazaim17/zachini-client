@@ -1,6 +1,6 @@
 import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import "./css/shop.css";
 import { Grid, ImageList } from "@mui/material";
 import { NavLink } from "react-router-dom";
